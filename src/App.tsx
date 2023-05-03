@@ -14,8 +14,8 @@ const About = React.lazy(() => import("./pages/about"));
 const Contact = React.lazy(() => import("./pages/contact"));
 const PrivateForm = React.lazy(() => import("./pages/privateInsurance"));
 
-const frontendApi = 'equipped-jay-85.clerk.accounts.dev';
-const clerkPubKey = 'pk_test_ZXF1aXBwZWQtamF5LTg1LmNsZXJrLmFjY291bnRzLmRldiQ';
+const frontendApi = "equipped-jay-85.clerk.accounts.dev";
+const clerkPubKey = "pk_test_ZXF1aXBwZWQtamF5LTg1LmNsZXJrLmFjY291bnRzLmRldiQ";
 console.log("imported everything App...");
 
 function App() {
@@ -24,18 +24,20 @@ function App() {
   return (
     <ClerkProvider publishableKey={clerkPubKey}>
       <BrowserRouter>
-        <SignedIn>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/private-insurance" element={<PrivateForm />} />
-          </Routes>
-        </SignedIn>
-        <SignedOut>
-          <RedirectToSignIn />
-        </SignedOut>
+        <SidebarMenu>
+          <SignedIn>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/privateInsurance" element={<PrivateForm />} />
+            </Routes>
+          </SignedIn>
+          <SignedOut>
+            <RedirectToSignIn />
+          </SignedOut>
+        </SidebarMenu>
       </BrowserRouter>
     </ClerkProvider>
   );
