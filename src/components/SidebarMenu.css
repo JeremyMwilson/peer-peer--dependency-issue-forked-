@@ -3,9 +3,9 @@
 }
 .menu {
   position: fixed;
-  top: 0;
+  top: 15;
   left: -250px;
-  height: 50%;
+  height: 30%;
   width: 140px;
   background-color: #f8f8f8;
   transition: all 0.3s ease-in-out;
@@ -59,6 +59,7 @@ a {
 
 .hamburger.open {
   left: 105px;
+  background-color: #f8f8f8;
 }
 
 @media screen and (max-width: 768px) {
@@ -96,6 +97,6 @@ a {
   }
 
   .content {
-    margin-left: 250px;
+    margin-left: 60px;
   }
 }

@@ -45,11 +45,6 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ children }) => {
             </Link>
           </li>
           <li>
-            <Link to="/photoUpload" onClick={closeMenu}>
-              Insurance Card
-            </Link>
-          </li>
-          <li>
             <Link to="/about" onClick={closeMenu}>
               About
             </Link>
