@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./pages/privateInsurnace.module.css";
+import styles from "./privateInsurance.module.css";
 import axios from "axios";
 import SidebarMenu from "../components/SidebarMenu";
 

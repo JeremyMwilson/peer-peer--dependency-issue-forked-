@@ -14,15 +14,15 @@ const About = React.lazy(() => import("./pages/about"));
 const Contact = React.lazy(() => import("./pages/contact"));
 const PrivateForm = React.lazy(() => import("./pages/privateInsurance"));
 
-const frontendApi = process.env.REACT_APP_CLERK_FRONTEND_API || "";
-const publishableKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+const frontendApi = 'equipped-jay-85.clerk.accounts.dev';
+const clerkPubKey = 'pk_test_ZXF1aXBwZWQtamF5LTg1LmNsZXJrLmFjY291bnRzLmRldiQ';
 console.log("imported everything App...");
 
 function App() {
   console.log("Rendering App...");
 
   return (
-    <ClerkProvider frontendApi={frontendApi || ""}>
+    <ClerkProvider publishableKey={clerkPubKey}>
       <BrowserRouter>
         <SignedIn>
           <Routes>
