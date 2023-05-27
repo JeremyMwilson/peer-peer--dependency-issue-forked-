@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SidebarMenu.css";
 
-const SidebarMenu = ({ children }) => {
+interface SidebarMenuProps {
+  children: React.ReactNode;
+}
+
+const SidebarMenu: React.FC<SidebarMenuProps> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -36,13 +40,13 @@ const SidebarMenu = ({ children }) => {
             </Link>
           </li>
           <li>
-            <Link to="/faq" onClick={closeMenu}>
-              FAQ
+            <Link to="/contact2" onClick={closeMenu}>
+              Contact2
             </Link>
           </li>
           <li>
-            <Link to="/photoUpload" onClick={closeMenu}>
-              Insurance Card
+            <Link to="/faq" onClick={closeMenu}>
+              FAQ
             </Link>
           </li>
           <li>
@@ -61,5 +65,4 @@ const SidebarMenu = ({ children }) => {
     </div>
   );
 };
-
 export default SidebarMenu;

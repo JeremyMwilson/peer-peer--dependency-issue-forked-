@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./pages/privateInsurnace.module.css";
+import styles from "./privateInsurance.module.css";
 import axios from "axios";
 import SidebarMenu from "../components/SidebarMenu";
 
@@ -13,7 +13,7 @@ const PrivateForm = () => {
   const [preExistingConditions, setPreExistingConditions] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const formData = {
@@ -36,8 +36,7 @@ const PrivateForm = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <SidebarMenu />
+      <SidebarMenu>
       <React.Fragment>
         {!formSubmitted ? (
           <form className={styles.form} onSubmit={handleSubmit}>
@@ -113,7 +112,7 @@ const PrivateForm = () => {
           </div>
         )}
       </React.Fragment>
-    </div>
+    </SidebarMenu>
   );
 };
 
