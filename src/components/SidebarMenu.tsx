@@ -40,6 +40,11 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ children }) => {
             </Link>
           </li>
           <li>
+            <Link to="/contact2" onClick={closeMenu}>
+              Contact2
+            </Link>
+          </li>
+          <li>
             <Link to="/faq" onClick={closeMenu}>
               FAQ
             </Link>

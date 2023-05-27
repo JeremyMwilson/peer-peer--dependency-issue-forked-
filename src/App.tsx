@@ -13,6 +13,7 @@ const Home = React.lazy(() => import("./pages/HomePage"));
 const FAQ = React.lazy(() => import("./pages/faq"));
 const About = React.lazy(() => import("./pages/about"));
 const Contact = React.lazy(() => import("./pages/contact"));
+const Contact2 = React.lazy(() => import("./pages/contact"));
 const PrivateForm = React.lazy(() => import("./pages/privateInsurance"));
 
 const frontendApi = "equipped-jay-85.clerk.accounts.dev";
@@ -32,6 +33,7 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/contact2" element={<Contact2 />} />
               <Route path="/privateInsurance" element={<PrivateForm />} />
             </Routes>
           </SignedIn>
